@@ -26,3 +26,13 @@ replace it with yours before building.
    gitosis-admin repo:
 
     > $ git clone ssh://git@HOST:PORT/gitolite-admin
+
+5. To fetch the default gitolite-admin repo, first run the image by bash
+   command:
+
+    > $ docker run -i -v /home/data/git:/test -t yhfu/gitolite /bin/bash
+
+    and then copy the gitolite-admin to the mounted dir /test in docker
+    image:
+
+    > $ cp -rp /home/git/repositories/* /test/
